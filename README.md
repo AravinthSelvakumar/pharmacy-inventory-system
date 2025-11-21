@@ -24,5 +24,5 @@ It is designed for beginners to understand Core Java, JDBC, and how to connect J
 
 ---
 
-## 📂 Project Structure
+
 
