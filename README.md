@@ -19,7 +19,7 @@ It is designed for beginners to understand Core Java, JDBC, and how to connect J
 - **Java (Core Java)**
 - **MySQL Database**
 - **JDBC Driver**
-- **Eclipse IDE** (optional)
+- **Eclipse IDE** 
 - **Git & GitHub** (for version control)
 
 ---
