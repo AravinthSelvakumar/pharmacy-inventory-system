@@ -16,8 +16,7 @@ This project performs basic CRUD operations such as adding, viewing, updating, a
 
 ---
 
-## 📂 Project Structure
-/PharmacyInventorySystem/
+PharmacyInventorySystem/
 │
 ├── src/
 │   ├── com/app/App.java
@@ -34,8 +33,6 @@ This project performs basic CRUD operations such as adding, viewing, updating, a
 ├── .project
 └── README.md
 
-
----
 
 ## 🛠️ Technologies Used
 
