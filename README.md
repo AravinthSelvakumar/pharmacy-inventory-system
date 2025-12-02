@@ -17,15 +17,22 @@ This project performs basic CRUD operations such as adding, viewing, updating, a
 ---
 
 ## 📂 Project Structure
-
-
-
-/pharmacy-inventory-system
-│── DBConnection.java
-│── Medicine.java
-│── PharmacyInventorySystem.java
-│── README.md
-└── pharmacy.sql (optional)
+PharmacyInventorySystem/
+│
+├── src/
+│   ├── com/app/App.java
+│   ├── com/service/InventoryService.java
+│   ├── com/dao/MedicineDAO.java
+│   ├── com/model/Medicine.java
+│   ├── com/util/DBConnection.java
+│   └── module-info.java
+│
+├── lib/
+│   └── mysql-connector-j.jar
+│
+├── .classpath
+├── .project
+└── README.md
 
 
 ---
