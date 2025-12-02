@@ -36,10 +36,6 @@ PharmacyInventorySystem/
 `-- README.md
 ```
 
-*(ASCII version → 100% safe, will never break in GitHub)*
-
----
-
 ## 🛠️ Technologies Used
 
 - **Java (Core Java)**
