@@ -1,158 +1,124 @@
-📦 Pharmacy Inventory System
+# Pharmacy Inventory System
 
-A Java-based console application for managing pharmacy inventory with features like CRUD operations, expiry alerts, low-stock detection, purchases, and automatic deletion of expired medicines.
-Built using Core Java, JDBC, MySQL, and structured using a clean DAO + Service + Model architecture.
+A simple Java-based Pharmacy Inventory Management application using JDBC and MySQL.  
+This project performs basic CRUD operations such as adding, viewing, updating, and deleting medicine records.
 
-🚀 Features
-🏥 Medicine Management
+---
 
-Add new medicines
+## 🚀 Features
 
-View all medicines
+- Add new medicine
+- View all medicines
+- Update existing medicine details
+- Delete a medicine by ID
+- MySQL database connectivity using JDBC
+- Clean and simple console-based UI
 
-Update stock, price, and expiry date
+---
 
-Delete medicines
+## 📂 Project Structure
 
-Delete all expired medicines automatically
 
-⚠ Smart Alerts
 
-Expiry Alerts: Show medicines expiring within the next 30 days
+/pharmacy-inventory-system
+│── DBConnection.java
+│── Medicine.java
+│── PharmacyInventorySystem.java
+│── README.md
+└── pharmacy.sql (optional)
 
-Low Stock Alerts: Detect medicines with stock less than 10
 
-Purchase Module: Deduct purchased quantity & show warnings
+---
 
-📂 Clean Architecture (Interview Friendly)
+## 🛠️ Technologies Used
 
-App (Presentation Layer) – Handles user menu
+- **Java (Core Java)**
+- **JDBC**
+- **MySQL Database**
 
-Service Layer – Business logic
+---
 
-DAO Layer – Database operations
+## ⚙️ Setup Instructions
 
-Model Layer – POJOs
+### 1. Clone the repository
 
-Utility Layer – Database connection
 
-🏗 Project Structure
-PharmacyInventorySystem/
-│
-├── src/
-│   ├── com/app/App.java
-│   ├── com/service/InventoryService.java
-│   ├── com/dao/MedicineDAO.java
-│   ├── com/model/Medicine.java
-│   ├── com/util/DBConnection.java
-│   └── module-info.java
-│
-├── lib/
-│   └── mysql-connector-j.jar
-│
-├── .classpath
-├── .project
-└── README.md
+git clone https://github.com/AravinthSelvakumar/pharmacy-inventory-system.git
 
-🛢 Database Setup
-1. Create Database
+
+### 2. Create MySQL database
+
+
 CREATE DATABASE pharmacy;
 USE pharmacy;
 
-2. Create Table
 CREATE TABLE medicine (
-    medicine_id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100),
-    batch_no VARCHAR(50),
-    category VARCHAR(50),
-    price DOUBLE,
-    stock INT,
-    expiry_date DATE,
-    supplier_id INT
+id INT PRIMARY KEY,
+name VARCHAR(50),
+quantity INT,
+price DOUBLE
 );
 
-⚙️ Configuration
 
-Edit your MySQL username & password in:
-
-src/com/util/DBConnection.java
-
-private static final String USER = "root";
-private static final String PASS = "your_password";
+### 3. Update DB credentials  
+In `DBConnection.java`, change your:
 
 
-Also ensure you add MySQL Connector JAR to the classpath.
+URL
+USERNAME
+PASSWORD
 
-▶️ How to Run
-Using Eclipse
 
-Import project → Existing Java Project
+### 4. Compile and Run the project
 
-Add MySQL JDBC JAR to the Build Path
 
-Run App.java
+javac *.java
+java PharmacyInventorySystem
 
-Using Terminal
-javac -cp .;mysql-connector-j.jar src/com/app/App.java
-java -cp .;mysql-connector-j.jar com.app.App
 
-🧩 Modules Explained
-1. DBConnection
+---
 
-Handles MySQL connection using JDBC.
+## 📸 Sample Output
 
-2. MedicineDAO
 
-CRUD operations + extra features:
 
-getLowStockMedicines
+===== Pharmacy Inventory System =====
 
-getExpiringWithinDays
+Add Medicine
 
-deleteExpiredMedicines
+View Medicines
 
-3. InventoryService
+Update Medicine
 
-Manages:
+Delete Medicine
 
-User input
+Exit
+Enter your choice:
 
-Business logic
 
-Menu navigation
+---
 
-4. App
+## 👨‍💻 Author
 
-Entry point of the application.
+**Aravinth Selvakumar**  
+GitHub: https://github.com/AravinthSelvakumar
 
-🛠 Technology Stack
+---
 
-Java 21
+## ⭐ Contribution
 
-JDBC
+Feel free to fork this repo and submit pull requests!
 
-MySQL
+---
 
-Eclipse
+## 📜 License
 
-DAO Design Pattern
+This project is open-source and free to use.
 
-OOP Principles
+🔥 Tips to Avoid Formatting Errors
 
-📜 Future Improvements (Optional)
-
-You can add these to impress interviewers:
-
-JavaFX GUI
-
-Supplier management module
-
-Sales & billing module
-
-PDF invoice generation
-
-Login/authentication
-
-REST API using Spring Boot
-
-Web UI using React
+✔ Copy only from the triple-backtick (```) block
+✔ Do not copy from the preview
+✔ Paste directly in GitHub's Markdown editor
+✔ GitHub recognizes Markdown automatically
+✔ Use Preview before committing
